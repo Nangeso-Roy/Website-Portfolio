@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('/blog',[BlogController::class,'index']);
 Route::get('/blog/{blog}',[BlogController::class,'show']);
-Route::get('/blog/create/post',[BlogController::class,'create']);
+Route::get('/blog/create',[BlogController::class,'create']);
 Route::post('/blog/create/post',[BlogController::class,'store']);
 Route::get('/blog/{blog}/edit',[BlogController::class,'edit']);
 Route::put('/blog/{blog}/edit',[BlogController::class,'update']);
