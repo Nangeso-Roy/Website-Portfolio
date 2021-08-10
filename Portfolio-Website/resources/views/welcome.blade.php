@@ -143,7 +143,7 @@
                 <p>This is Johnroy's Portfolio</p>
             </div>
             <div class="container col-12 text-center pt-5">
-                <a href="/blog" class="btn btn-outline-primary">Read Blog</a>
+                <a href="/blogs" class="btn btn-outline-primary">Read Blog</a>
             </div>
         </div>
 

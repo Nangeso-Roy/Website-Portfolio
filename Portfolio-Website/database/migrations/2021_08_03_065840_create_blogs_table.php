@@ -19,7 +19,7 @@ class CreateBlogsTable extends Migration
             $table->text('body')->nullable();
             $table->text('user_id');
             $table->timestamps();
-            $table->softDeletes()->nullable();
+            $table->softDeletes();
         });
     }
 

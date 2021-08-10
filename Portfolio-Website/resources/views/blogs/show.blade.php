@@ -3,11 +3,11 @@
     <div class="container">
         <div class="row">
             <div class="col-12 pt-2">
-                <a href="/blog" class="btn btn-outline-primary btn-sm">Return</a>
+                <a href="/blogs" class="btn btn-outline-primary btn-sm">Return</a>
                 <h1 class="display-one">{{ucfirst($blog->title)}}</h1>
                 <p>{{ $blog->body }}</p>
                 <hr>
-                <a href="/blog/{{$blog->id}}/edit" class="btn btn-outline-primary">Edit Post</a>
+                <a href="/blogs/{{$blog->id}}/edit" class="btn btn-outline-primary">Edit Post</a>
                 <br>
                 <form id="delete-form"action="" method="POST">
                     @method('DELETE')
