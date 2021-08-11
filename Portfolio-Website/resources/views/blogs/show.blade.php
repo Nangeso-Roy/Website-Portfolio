@@ -8,12 +8,14 @@
                 <p>{{ $blog->body }}</p>
                 <hr>
                 <a href="/blogs/{{$blog->id}}/edit" class="btn btn-outline-primary">Edit Post</a>
-                <br>
-                <form id="delete-form"action="" method="POST">
-                    @method('DELETE')
-                    @csrf
-                    <button class="btn btn-danger">Delete Blog</button>
-                </form>
+                <div class ="col-14">
+                    <form id="delete-form"action="" method="POST">
+                        @method('DELETE')
+                        @csrf
+                        <button class="btn btn-danger">Delete Blog</button>
+                    </form>
+                </div>
+                
             </div>
         </div>
     </div>

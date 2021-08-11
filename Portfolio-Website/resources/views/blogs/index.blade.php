@@ -27,7 +27,7 @@
               
             
             <div class="col">
-                <a href="/blogs/create">Create New Blog</a>
+                <a href="/blogs/create" class="btn btn-outline-primary">Create New Blog</a>
             </div>
         </div>
     </div>
