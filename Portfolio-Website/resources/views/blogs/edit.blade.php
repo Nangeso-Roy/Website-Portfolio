@@ -11,10 +11,11 @@
 
                     <hr>
 
-                    <form action="" method="post">
-                        <input type="hidden" name="_method" value="PUT">
+                    <form action="{{route('blogs.update')}}" method="post">
+                        {{-- <input type="hidden" name="_method" value="PUT"> --}}
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         @csrf
-                        @method('PUT')
+                        {{ method_field('PATCH') }}
                         <div class="row">
                             <div class="control-group col-12 mt-2">
                                 <label for="title">Blog Title</label>
@@ -32,7 +33,7 @@
                                 </button>
                             </div>
                         </div>
-                        <input type="hidden" name="_method" value="PUT">
+                        {{-- <input type="hidden" name="_method" value="PATCH"> --}}
                     </form>
                 </div>
             </div>

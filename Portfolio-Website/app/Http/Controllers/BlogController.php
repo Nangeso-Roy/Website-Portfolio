@@ -23,7 +23,12 @@ class BlogController extends Controller
     }
 
     public function store(Request $request){//function to store blog in the db
+        $blog = new Blog();
 
+        $blog->title=request('title');
+        $blog->body=request('body');
+
+        return redirect('/blogs')->with('success','The new blog has been successfully created');
     }
 
     public function edit(Blog $blog){//form to edit a blog
