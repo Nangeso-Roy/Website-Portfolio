@@ -18,6 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/about', function(){
+    return view('about');
+});
 // Route::get('/blog',[BlogController::class,'index']);
 // Route::get('/blog/{blog}',[BlogController::class,'show']);
 // Route::get('/blog/create',[BlogController::class,'create']);
