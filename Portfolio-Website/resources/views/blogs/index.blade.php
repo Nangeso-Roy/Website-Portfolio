@@ -2,7 +2,7 @@
 @section('content')
     
 
-<div class="container ">
+<div class="container d-flex justify-content-center ">
     <div class="row">
         <div class="col">
             <div class="row">
@@ -13,7 +13,7 @@
             
 
             @foreach ($blogs as $blog)
-                <ul class="d-flex justify-content-center">
+                <ul>
                     <li><a href="blogs/{{$blog->id}}">{{ ucfirst($blog->title)}}</a></li>
                 </ul>
                 @empty($blog)
@@ -25,7 +25,7 @@
               
                 {{$blogs->links()}}
               
-            
+            <p></p>
             <div class="col">
                 <a href="/blogs/create" class="btn btn-outline-primary">Create New Blog</a>
             </div>

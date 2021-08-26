@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('content')
 
-    <div class="container">
+    <div class="container d-flex justify-content-center">
         <div class="row">
-            <div class="col-12 pt-2">
+            <div class="col-12 pt-2 text-center">
                 <a href="/blogs" class="btn btn-outline-primary btn-sm">Return</a>
                 <div class="border rounded mt-5 pl-4 pr-4 pt-4 pb-4">
                     <h1 class="display-4">Edit Blog</h1>
@@ -11,14 +11,16 @@
 
                     <hr>
 
-                    <form action="{{route('blogs.update')}}" method="post">
-                        {{-- <input type="hidden" name="_method" value="PUT"> --}}
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <form action="{{route('blogs.update', ['blog'=>$blog->id])}}" method="post">
+                        <input type="hidden" name="_method" value="PUT">
+                        {{-- <input type="hidden" name="_token" value="{{ csrf_token() }}"> --}}
+
+                        {{-- @method('PUT') --}}
                         @csrf
-                        {{ method_field('PATCH') }}
+                        {{-- {{ method_field('PATCH') }} --}}
                         <div class="row">
                             <div class="control-group col-12 mt-2">
-                                <label for="title">Blog Title</label>
+                                <label for="title">Blog Title:  </label>
                                 <input type="text" name="title" id="title" placeholder="Edit the Title" value="{{$blog->title}}" required>
                             </div>
                             <div class="control-group col-12">

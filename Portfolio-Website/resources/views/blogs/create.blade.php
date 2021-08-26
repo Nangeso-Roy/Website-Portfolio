@@ -10,6 +10,19 @@
 
                     <hr>
 
+                    <div class="card-body">
+                        @if ($errors->any())
+                            <ul>
+                                    <div class="alert alert-danger">
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{$error}}</li>
+                                        @endforeach
+                                    </div>
+                            </ul>
+                                
+                        @endif
+                    </div>
+
                     <form action="{{route('blogs.store')}}" method="POST">
                         @csrf
                         <div class="row">
@@ -31,6 +44,8 @@
                             </div>
                         </div>
                     </form>
+
+                    
                 </div>
             </div>
 
