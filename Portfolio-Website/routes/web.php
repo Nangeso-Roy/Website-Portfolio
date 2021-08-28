@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,8 @@ Route::get('/', function () {
 Route::get('/about', function(){
     return view('about');
 });
+
+Route::get('/contact',[ContactController::class,'createForm']);
 // Route::get('/blog',[BlogController::class,'index']);
 // Route::get('/blog/{blog}',[BlogController::class,'show']);
 // Route::get('/blog/create',[BlogController::class,'create']);
@@ -31,3 +34,4 @@ Route::get('/about', function(){
 
 //Route Resource
 Route::resource('blogs',BlogController::class);
+// Route::resource('contacts',ContactController::class);
