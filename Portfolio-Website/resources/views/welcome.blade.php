@@ -101,7 +101,7 @@
 @extends('layouts.app')
 @section('content')
   <div id="welcomepage">                                
-    <div class="container relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+    <div class="welcome relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
         <div class="row">
             <div class="col-12 text-center pt-5">
                 <h3>Welcome!</h3>

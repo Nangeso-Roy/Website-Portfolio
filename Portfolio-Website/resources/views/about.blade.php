@@ -2,15 +2,21 @@
 @section('content')
     
 <div class="Container">
-    <div>
-        <div>
+    <div class="card">
+        <div class="card-body mx-auto">
             <p>
-                <h2>Work</h2>
+                <div class="card-title">
+                    <h2>Work</h2>
+                </div>
+                
                 <br>
                 I am currently an Intern at Eden Technologies hoping to improve my skills.
             </p>
             <p>
-                <h2>Experience</h2>
+                <div class="card-title">
+                    <h2>Experience</h2>
+                </div>
+                
                 <br>
                 My coding experience has been in HTML,CSS and PHP. I can use the Laravel PHP 
                 framework quite proficiently.

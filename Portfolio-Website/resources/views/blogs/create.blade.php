@@ -3,14 +3,17 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-12 pt-2">
+            <div class="col">
                 <a href="/blogs" class="btn btn-outline-primary btn-sm">Return</a>
-                <div class="border rounded mt-5 pl-4 pr-4 pt-4 pb-4">
-                    <h1 class="display-4">Write something New</h1>
+                <div class="card">
+                    <div class="card-title">
+                        <h1>Write something New</h1>
+                    </div>
+                    
 
                     <hr>
 
-                    <div class="card-body">
+                    <div class="card-body" style="width:5cm;">
                         @if ($errors->any())
                             <ul>
                                     <div class="alert alert-danger">
@@ -37,14 +40,14 @@
                             </div>
                         </div>
                         <div class="row mt-2">
-                            <div class="control-group col=12 text-center">
+                            <div class="control-group col d-flex justify-content-center">
                                 <button type="submit" id="btn=submit" class="btn btn-primary">
                                     Create Blog
                                 </button>
                             </div>
                         </div>
                     </form>
-
+                    <p></p>
                     
                 </div>
             </div>
