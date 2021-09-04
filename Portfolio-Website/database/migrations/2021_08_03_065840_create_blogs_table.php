@@ -15,9 +15,9 @@ class CreateBlogsTable extends Migration
     {
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
-            $table->text('title')->unique();
-            $table->text('body')->nullable();
-            $table->text('user_id')->nullable();
+            $table->string('title')->unique();
+            $table->mediumtext('body')->nullable();
+            $table->foreignID('user_id')->constrained()->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

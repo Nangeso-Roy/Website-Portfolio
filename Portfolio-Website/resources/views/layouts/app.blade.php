@@ -35,39 +35,54 @@
            body .welcomepage {
                 
                 /* background-image: url("public/img/bg-masthead.jpg"); */
-                background-color: cadetblue;
+                /* background-color: cadetblue; */
                 /* background-image: url("{{asset('public/background.jpg')}}"); */
             }
             body {
                 /* font-family: 'Nunito', sans-serif; */
                 text-align: center !important;
                 /* background-color: cadetblue; */
-                margin: auto !important;
-                background-image: url('/img/background.jpg');
+                margin-left:auto;
+                margin-right:auto;
+                vertical-align: middle !important;
+                /* background-image: url('/img/background.jpg'); */
+                background-image:url('/img/bg-masthead.jpg');
                 background-position: center;
                 background-size: cover;
                 width: 100vh; 
                  height: 100vh;
+                 color:#fffff0;
+                 /* color: #edf2f7; */
                  
                  
                 /* -webkit-text-size-adjust:100%; */
 
             }
              .navbar{
-                background-color:#2f4f4f;
+                background-color:black;
                   
             } 
             .navbar *{
                 color:#edf2f7;
             }
-            .card{
-                background-color:#2f4f4f;
+            .list-group *,.card{
+                background-color:black; 
                 color:#fffff0;
+                
+                  
                 /* margin: 35px; */
                 justify-content: center;
                 display: flex;
                 align-items: center;
+                vertical-align: middle !important;
             }
+            
+            /* .pagination {
+            display: flex;
+            padding-left: 0;
+            list-style: none;
+            } */
+
             
         </style>
  
@@ -76,7 +91,7 @@
         <!-- Navigation-->
             <nav class="navbar navbar-expand  fixed-top py-3 shadow-lg p-3 mb-5 rounded" id="mainNav">
                 <div class="container px-4 px-lg-5 ml-auto"> 
-                    <a class="navbar-brand" href="#page-top">JohnRoy's Portfolio</a>
+                   <a class="navbar-brand " href="#page-top"><h3 class="display-5">JohnRoy's Portfolio</h3></a> 
                     <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarResponsive">
                         <ul class="navbar-nav ml-auto my-2 my-lg-0">
@@ -90,10 +105,10 @@
 
        
 
-            <div class="container h-100">
+            <div class="container">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-sm-12 my-auto">
-                        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+                        <div class="relative flex  justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
 
                             @yield('content')
                             <div class="row">

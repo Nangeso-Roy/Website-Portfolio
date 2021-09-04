@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Validator;
 
 class ContactController extends Controller
 {
-    public function createForm(Request $request){
+    public function createForm(){
         return view('contact');
     }
 

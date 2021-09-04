@@ -9,7 +9,7 @@
                         <h1 class="display-one">{{ucfirst($blog->title)}}</h1>
                         <p>{{ $blog->body }}</p>
                         <hr>
-                        <a href="/blogs/{{$blog->id}}/edit" class="btn btn-outline-primary">Edit Post</a>
+                        <a href="/blogs/{{$blog->id}}/edit" class="btn btn-outline-primary btn-light">Edit Post</a>
                         
                             <div class="d-flex justify-content-end">
                                 <form id="delete-form"action="{{route('blogs.destroy',['blog'=>$blog->id])}}" method="POST">

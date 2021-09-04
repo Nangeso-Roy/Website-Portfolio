@@ -3,7 +3,7 @@
     
 
 <div class="container d-flex justify-content-center ">
-    <div class="card text-center shadow-sm p-3 mb-5 rounded mt-5 pl-4 pr-4 pt-4 pb-4" style="width:15cm;">
+    <div class="card text-center shadow-sm  rounded " style="width:15cm;">
         <div class="row">
             <div class="col">
                 <div class="row">
@@ -33,7 +33,7 @@
                     
                         <p></p> 
                         <div class="col">
-                            <a href="/blogs/create" class="btn btn-outline-primary">Create New Blog</a>
+                            <a href="/blogs/create" class="btn btn-primary btn-light">Create New Blog</a>
                         </div>
                     </div>
                    

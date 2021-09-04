@@ -24,13 +24,7 @@ Route::get('/about', function(){
 });
 
 Route::get('/contact',[ContactController::class,'createForm']);
-// Route::get('/blog',[BlogController::class,'index']);
-// Route::get('/blog/{blog}',[BlogController::class,'show']);
-// Route::get('/blog/create',[BlogController::class,'create']);
-// Route::post('/blog/create/post',[BlogController::class,'store']);
-// Route::get('/blog/{blog}/edit',[BlogController::class,'edit']);
-// Route::put('/blog/{blog}/edit',[BlogController::class,'update']);
-// Route::delete('/blog/{blog}/edit',[BlogController::class,'destroy']);
+Route::post('/contact',[ContactController::class,'store'])->name('contact.store');
 
 //Route Resource
 Route::resource('blogs',BlogController::class);

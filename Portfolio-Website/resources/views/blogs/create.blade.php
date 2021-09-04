@@ -5,25 +5,21 @@
         <div class="row">
             <div class="col">
                 <a href="/blogs" class="btn btn-outline-primary btn-sm">Return</a>
-                <div class="card">
-                    <div class="card-title">
-                        <h1>Write something New</h1>
-                    </div>
-                    
-
-                    <hr>
-
-                    <div class="card-body" style="width:5cm;">
-                        @if ($errors->any())
-                            <ul>
+                <div class="card shadow-lg">
+                    <div class="card-body" style="width:8cm;">
+                        {{-- @if ($errors->any()) --}}
+                        <div class="card-title">
+                            <h3>Write something New</h3>
+                        </div>
+                        <hr>
+                            {{-- <ul>
                                     <div class="alert alert-danger">
                                         @foreach ($errors->all() as $error)
                                             <li>{{$error}}</li>
                                         @endforeach
                                     </div>
-                            </ul>
-                                
-                        @endif
+                            </ul>                              --}}
+                        {{-- @endif --}}
                     </div>
 
                     <form action="{{route('blogs.store')}}" method="POST">
@@ -41,7 +37,7 @@
                         </div>
                         <div class="row mt-2">
                             <div class="control-group col d-flex justify-content-center">
-                                <button type="submit" id="btn=submit" class="btn btn-primary">
+                                <button type="submit" id="btn=submit" class="btn btn-dark btn-rounded">
                                     Create Blog
                                 </button>
                             </div>
