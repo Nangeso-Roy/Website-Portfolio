@@ -59,7 +59,7 @@ class BlogController extends Controller
         //     ->withInput();
         //}
 
-        // $validatedData = $request->validated();
+        // $validatedData = $request->validated();  
         $blog->update([
             'title'=>$request->title,
             'body'=>$request->body

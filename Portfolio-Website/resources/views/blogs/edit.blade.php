@@ -31,7 +31,7 @@
                             </div>
                             <div class="row mt-2">
                                 <div class="control-group col-12 text-center">
-                                    <button id="btn-submit" class="btn-primary">
+                                    <button id="btn-submit" class="btn-success btn-rounded">
                                         Update Blog
                                     </button>
                                 </div>

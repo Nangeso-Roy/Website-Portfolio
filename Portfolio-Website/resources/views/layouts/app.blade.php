@@ -76,6 +76,14 @@
                 align-items: center;
                 vertical-align: middle !important;
             }
+            /* .round_shadow_button:hover{
+                margin: 5px auto 3px;
+                -moz-box-shadow: 0 0 1px #eee;
+                -webkit-box-shadow:0 0 1px #eee;
+                -o-box-shadow:0 0 1px #eee;
+                -ms-box-shadow:0 0 1px #eee;
+                box-shadow: 0 0 1px #eee;
+            } */
             
             /* .pagination {
             display: flex;

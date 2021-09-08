@@ -2,10 +2,15 @@
 @section('content')
 
 <div class="container">
-    <form method="POST" action="{{route('contact.store')}}" >
+    <form method="POST" action="{{route('storeform')}}" >
         @csrf
 
         <div class="form-group">
+            @if(Session::has('success'))
+                <div class="alert alert-success">
+                    {{Session::get('success')}}
+                </div>
+            @endif    
             <label for="Name">Name</label>
             <input type="text" name="name" id="name" class="form-control {{$errors->has('name')? 'error':''}}">
 
@@ -54,7 +59,13 @@
                     </div>   
                  @endif
         </div>
-        <input type="submit" value="SUBMIT" class="btn btn-dark btn-block">
+        {{-- <input type="submit" value="SUBMIT" class="btn btn-dark btn-block"> --}}
+        <div class="control-group">
+            <button id="btn-submit" class="btn btn-dark btn-block">
+                SUBMIT
+            </button>
+        </div>
+
 
     </form>
 

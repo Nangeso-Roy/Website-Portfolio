@@ -12,9 +12,11 @@ class ContactController extends Controller
         return view('contact');
     }
 
-    public function store(Request $request){
+    public function storeForm(Request $request){
 // info('Just after the new model');
         //Form Validattion
+        // dd($request);
+        
         $this->validate($request,[
             'name'=>'required',
             'email'=>'required|email',
@@ -22,9 +24,20 @@ class ContactController extends Controller
             'subject'=>'required',
             'message'=>'required'       ]);
 
-         Contact::create($request->all());
+        //  Contact::create($request->all());
+        //  info('storing the blog');
          
-         return back()->with('success','I have received your Message.Thank you for contacting me!');
+        $contact = new Contact();
+        $contact->name=request('name');
+        $contact->email=request('email');
+        $contact->phone=request('phone');
+        $contact->subject=request('subject');
+        $contact->message=request('message');
+
+        $contact->save();
+
+         return redirect('/')
+         ->with('success','I have received your Message.Thank you for contacting me!');
     }
     
         

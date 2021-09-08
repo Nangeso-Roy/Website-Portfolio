@@ -23,9 +23,11 @@ Route::get('/about', function(){
     return view('about');
 });
 
+//Route for contacts page
+Route::post('/contact',[ContactController::class,'storeForm'])->name('storeform');
 Route::get('/contact',[ContactController::class,'createForm']);
-Route::post('/contact',[ContactController::class,'store'])->name('contact.store');
 
-//Route Resource
+
+//Route Resource for blog routes
+
 Route::resource('blogs',BlogController::class);
-// Route::resource('contacts',ContactController::class);
